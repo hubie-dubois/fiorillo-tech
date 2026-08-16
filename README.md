@@ -36,6 +36,16 @@ https://fiorillotech.com/thanks.html
 
 after a successful submission.
 
+The form includes one optional file attachment field named `attachment`.
+Formspree file uploads require the form to use:
+
+```html
+enctype="multipart/form-data"
+```
+
+Formspree file uploads are plan-dependent. Confirm the active Formspree plan
+supports uploads, then test one live submission with a small screenshot.
+
 ## Turnstile Spam Protection
 
 The contact form uses Cloudflare Turnstile with the public site key embedded in
