@@ -44,6 +44,10 @@ email:
 help@fiorillotech.com
 ```
 
+The service selector uses checkboxes so customers can choose more than one
+issue. `contact.js` requires at least one service selection and only shows the
+TV mounting details when TV mounting or TV setup is selected.
+
 ## Turnstile Spam Protection
 
 The contact form uses Cloudflare Turnstile with the public site key embedded in
