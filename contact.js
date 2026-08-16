@@ -30,8 +30,21 @@
 
   function updateTvDetails() {
     var showTvDetails = tvOption.checked;
-    tvDetails.hidden = !showTvDetails;
-    tvDetails.disabled = !showTvDetails;
+
+    if (showTvDetails) {
+      tvDetails.hidden = false;
+      tvDetails.disabled = false;
+      tvDetails.removeAttribute("hidden");
+      tvDetails.removeAttribute("disabled");
+      tvDetails.style.display = "";
+    } else {
+      tvDetails.hidden = true;
+      tvDetails.disabled = true;
+      tvDetails.setAttribute("hidden", "");
+      tvDetails.setAttribute("disabled", "");
+      tvDetails.style.display = "none";
+    }
+
     tvOption.setAttribute("aria-expanded", String(showTvDetails));
 
     if (!showTvDetails) {
