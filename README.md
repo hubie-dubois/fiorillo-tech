@@ -36,15 +36,13 @@ https://fiorillotech.com/thanks.html
 
 after a successful submission.
 
-The form includes one optional file attachment field named `attachment`.
-Formspree file uploads require the form to use:
+The form does not accept file uploads on the static site. If a customer wants
+to send a screenshot, photo, or other file, the contact page directs them to
+email:
 
-```html
-enctype="multipart/form-data"
+```text
+help@fiorillotech.com
 ```
-
-Formspree file uploads are plan-dependent. Confirm the active Formspree plan
-supports uploads, then test one live submission with a small screenshot.
 
 ## Turnstile Spam Protection
 
@@ -76,6 +74,6 @@ For GitHub Pages, publish from the repository root. Keep `.nojekyll`.
 
 ## Still Needed
 
-- Real phone/email if you want them displayed on the site
+- Real phone number if you want it displayed on the site
 - Owner names and real photo
 - Test a live Formspree submission after Turnstile is enabled in Formspree
