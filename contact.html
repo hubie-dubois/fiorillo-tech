@@ -41,7 +41,7 @@
             <p class="note">This form uses Cloudflare Turnstile to help reduce spam.</p>
           </div>
 
-          <form class="help-form" action="https://formspree.io/f/mnpaznpz" method="POST">
+          <form class="help-form" action="https://formspree.io/f/mnpaznpz" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_subject" value="New Fiorillo Tech help request">
             <input type="hidden" name="_next" value="https://fiorillotech.com/thanks.html">
             <label class="honeypot" aria-hidden="true">
@@ -50,22 +50,22 @@
             </label>
 
             <label>
-              <span>Name</span>
+              <span>Name (required)</span>
               <input name="name" autocomplete="name" required>
             </label>
 
             <label>
-              <span>Phone</span>
+              <span>Phone (required)</span>
               <input name="phone" type="tel" autocomplete="tel" required>
             </label>
 
             <label>
-              <span>Email, if you prefer email</span>
+              <span>Email (optional)</span>
               <input name="email" type="email" autocomplete="email">
             </label>
 
             <label>
-              <span>What do you need help with?</span>
+              <span>What do you need help with? (required)</span>
               <select name="service" required>
                 <option value="">Choose one</option>
                 <option>Computer help</option>
@@ -80,30 +80,36 @@
             </label>
 
             <label>
-              <span>What is happening?</span>
+              <span>What is happening? (required)</span>
               <textarea name="message" rows="7" required placeholder="Example: My printer stopped printing after I changed Wi-Fi."></textarea>
             </label>
 
             <label>
-              <span>City or ZIP code</span>
+              <span>City or ZIP code (required)</span>
               <input name="location" autocomplete="postal-code" required>
             </label>
 
             <label>
-              <span>Good times to reach you</span>
+              <span>Good times to reach you (optional)</span>
               <input name="availability" placeholder="Example: weekday evenings or Saturday afternoon">
             </label>
 
             <fieldset>
-              <legend>If this is for TV mounting, share what you know.</legend>
+              <legend>If this is for TV mounting, share what you know. (optional)</legend>
               <label><span>TV size</span><input name="tv_size" placeholder="Example: 65 inch"></label>
               <label><span>Do you already have a mount?</span><input name="tv_mount" placeholder="Yes, no, or not sure"></label>
               <label><span>Wall type, if known</span><input name="wall_type" placeholder="Drywall, brick, fireplace, not sure"></label>
             </fieldset>
 
+            <label>
+              <span>Screenshot or photo (optional)</span>
+              <input name="attachment" type="file" accept="image/*,.pdf,.txt,.doc,.docx" aria-describedby="attachment-help">
+              <small id="attachment-help" class="field-help">You may attach one screenshot, photo, or document if it helps explain the problem. Please do not upload passwords, payment information, or private documents.</small>
+            </label>
+
             <label class="checkbox">
               <input type="checkbox" name="consent" required>
-              <span>I understand this request does not guarantee immediate service.</span>
+              <span>I understand this request does not guarantee immediate service. (required)</span>
             </label>
 
             <div class="turnstile-wrap">
