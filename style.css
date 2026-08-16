@@ -409,6 +409,40 @@ textarea {
   resize: vertical;
 }
 
+.field-help {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.checkbox-list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.checkbox-option {
+  align-items: flex-start;
+  background: white;
+  border: 1px solid #bdb4a6;
+  border-radius: 8px;
+  display: flex;
+  gap: 0.7rem;
+  padding: 0.75rem;
+}
+
+.checkbox-option input {
+  flex: 0 0 auto;
+  height: 20px;
+  margin-top: 0.2rem;
+  min-height: 20px;
+  width: 20px;
+}
+
+.help-form.form-ready:not(.tv-selected) .tv-details {
+  display: none;
+}
+
 .checkbox {
   align-items: start;
   display: flex;

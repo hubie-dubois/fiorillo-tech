@@ -8,6 +8,7 @@
     <link rel="canonical" href="https://fiorillotech.com/contact.html">
     <link rel="stylesheet" href="style.css">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="contact.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -66,20 +67,20 @@
               <input name="email" type="email" autocomplete="email">
             </label>
 
-            <label>
-              <span>What do you need help with? (required)</span>
-              <select name="service" required>
-                <option value="">Choose one</option>
-                <option>Computer help</option>
-                <option>Wi-Fi or internet</option>
-                <option>Printer</option>
-                <option>Email, phone, tablet, or device setup</option>
-                <option>TV mounting or TV setup</option>
-                <option>Small-business technology</option>
-                <option>Website</option>
-                <option>Something else</option>
-              </select>
-            </label>
+            <fieldset class="service-options" aria-describedby="service-help">
+              <legend>What do you need help with? (required)</legend>
+              <p id="service-help" class="field-help">Check all that apply.</p>
+              <div class="checkbox-list">
+                <label class="checkbox-option"><input type="checkbox" name="service" value="Computer help"><span>Computer help</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="service" value="Wi-Fi or internet"><span>Wi-Fi or internet</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="service" value="Printer"><span>Printer</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="service" value="Email, phone, tablet, or device setup"><span>Email, phone, tablet, or device setup</span></label>
+                <label class="checkbox-option"><input id="service-tv" type="checkbox" name="service" value="TV mounting or TV setup" aria-controls="tv-details" aria-expanded="true"><span>TV mounting or TV setup</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="service" value="Small-business technology"><span>Small-business technology</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="service" value="Website"><span>Website</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="service" value="Something else"><span>Something else</span></label>
+              </div>
+            </fieldset>
 
             <label>
               <span>What is happening? (required)</span>
@@ -96,7 +97,7 @@
               <input name="availability" placeholder="Example: weekday evenings or Saturday afternoon">
             </label>
 
-            <fieldset>
+            <fieldset id="tv-details" class="tv-details">
               <legend>If this is for TV mounting, share what you know. (optional)</legend>
               <label><span>TV size</span><input name="tv_size" placeholder="Example: 65 inch"></label>
               <label><span>Do you already have a mount?</span><input name="tv_mount" placeholder="Yes, no, or not sure"></label>
