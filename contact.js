@@ -30,7 +30,8 @@
 
   function updateTvDetails() {
     var showTvDetails = tvOption.checked;
-    form.classList.toggle("tv-selected", showTvDetails);
+    tvDetails.hidden = !showTvDetails;
+    tvDetails.disabled = !showTvDetails;
     tvOption.setAttribute("aria-expanded", String(showTvDetails));
 
     if (!showTvDetails) {
@@ -50,6 +51,5 @@
   });
 
   form.addEventListener("submit", updateServiceValidation);
-  form.classList.add("form-ready");
   updateFormState();
 })();

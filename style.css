@@ -405,6 +405,13 @@ textarea {
   width: 100%;
 }
 
+input[type="checkbox"] {
+  accent-color: var(--green);
+  min-height: auto;
+  padding: 0;
+  width: auto;
+}
+
 textarea {
   resize: vertical;
 }
@@ -418,29 +425,24 @@ textarea {
 
 .checkbox-list {
   display: grid;
-  gap: 0.55rem;
+  border-top: 1px solid var(--line);
+  gap: 0;
 }
 
 .checkbox-option {
   align-items: flex-start;
-  background: white;
-  border: 1px solid #bdb4a6;
-  border-radius: 8px;
+  border-bottom: 1px solid var(--line);
   display: flex;
-  gap: 0.7rem;
-  padding: 0.75rem;
+  gap: 0.55rem;
+  padding: 0.55rem 0;
 }
 
 .checkbox-option input {
   flex: 0 0 auto;
-  height: 20px;
-  margin-top: 0.2rem;
-  min-height: 20px;
-  width: 20px;
-}
-
-.help-form.form-ready:not(.tv-selected) .tv-details {
-  display: none;
+  height: 17px;
+  margin-top: 0.25rem;
+  min-height: 17px;
+  width: 17px;
 }
 
 .checkbox {
