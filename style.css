@@ -409,12 +409,6 @@ textarea {
   resize: vertical;
 }
 
-.field-help {
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
 .checkbox {
   align-items: start;
   display: flex;

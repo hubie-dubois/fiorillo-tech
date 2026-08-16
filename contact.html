@@ -38,10 +38,12 @@
             <h2>Before you send</h2>
             <p>Appointments are scheduled. Evenings and weekends may be available.</p>
             <p>Please do not send passwords through this form.</p>
+            <p>Prefer email? You can write directly to <a class="text-link" href="mailto:help@fiorillotech.com">help@fiorillotech.com</a> instead.</p>
+            <p>If you have a screenshot, photo, or file that would help explain the problem, please email it to that address.</p>
             <p class="note">This form uses Cloudflare Turnstile to help reduce spam.</p>
           </div>
 
-          <form class="help-form" action="https://formspree.io/f/mnpaznpz" method="POST" enctype="multipart/form-data">
+          <form class="help-form" action="https://formspree.io/f/mnpaznpz" method="POST">
             <input type="hidden" name="_subject" value="New Fiorillo Tech help request">
             <input type="hidden" name="_next" value="https://fiorillotech.com/thanks.html">
             <label class="honeypot" aria-hidden="true">
@@ -100,12 +102,6 @@
               <label><span>Do you already have a mount?</span><input name="tv_mount" placeholder="Yes, no, or not sure"></label>
               <label><span>Wall type, if known</span><input name="wall_type" placeholder="Drywall, brick, fireplace, not sure"></label>
             </fieldset>
-
-            <label>
-              <span>Screenshot or photo (optional)</span>
-              <input name="attachment" type="file" accept="image/*,.pdf,.txt,.doc,.docx" aria-describedby="attachment-help">
-              <small id="attachment-help" class="field-help">You may attach one screenshot, photo, or document if it helps explain the problem. Please do not upload passwords, payment information, or private documents.</small>
-            </label>
 
             <label class="checkbox">
               <input type="checkbox" name="consent" required>
