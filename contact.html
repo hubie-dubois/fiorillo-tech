@@ -6,9 +6,9 @@
     <title>Request Help | Fiorillo Tech</title>
     <meta name="description" content="Request computer help, Wi-Fi help, printer help, TV mounting, or technology support from Fiorillo Tech in Champaign-Urbana.">
     <link rel="canonical" href="https://fiorillotech.com/contact.html">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <script src="contact.js" defer></script>
+    <script src="contact.js?v=2" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -75,7 +75,7 @@
                 <label class="checkbox-option"><input type="checkbox" name="service" value="Wi-Fi or internet"><span>Wi-Fi or internet</span></label>
                 <label class="checkbox-option"><input type="checkbox" name="service" value="Printer"><span>Printer</span></label>
                 <label class="checkbox-option"><input type="checkbox" name="service" value="Email, phone, tablet, or device setup"><span>Email, phone, tablet, or device setup</span></label>
-                <label class="checkbox-option"><input id="service-tv" type="checkbox" name="service" value="TV mounting or TV setup" aria-controls="tv-details" aria-expanded="true"><span>TV mounting or TV setup</span></label>
+                <label class="checkbox-option"><input id="service-tv" type="checkbox" name="service" value="TV mounting or TV setup" aria-controls="tv-details" aria-expanded="false"><span>TV mounting or TV setup</span></label>
                 <label class="checkbox-option"><input type="checkbox" name="service" value="Small-business technology"><span>Small-business technology</span></label>
                 <label class="checkbox-option"><input type="checkbox" name="service" value="Website"><span>Website</span></label>
                 <label class="checkbox-option"><input type="checkbox" name="service" value="Something else"><span>Something else</span></label>
@@ -97,7 +97,7 @@
               <input name="availability" placeholder="Example: weekday evenings or Saturday afternoon">
             </label>
 
-            <fieldset id="tv-details" class="tv-details">
+            <fieldset id="tv-details" class="tv-details" hidden disabled>
               <legend>If this is for TV mounting, share what you know. (optional)</legend>
               <label><span>TV size</span><input name="tv_size" placeholder="Example: 65 inch"></label>
               <label><span>Do you already have a mount?</span><input name="tv_mount" placeholder="Yes, no, or not sure"></label>
