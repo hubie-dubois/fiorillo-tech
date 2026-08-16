@@ -7,6 +7,7 @@
     <meta name="description" content="Request computer help, Wi-Fi help, printer help, TV mounting, or technology support from Fiorillo Tech in Champaign-Urbana.">
     <link rel="canonical" href="https://fiorillotech.com/contact.html">
     <link rel="stylesheet" href="style.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -37,12 +38,16 @@
             <h2>Before you send</h2>
             <p>Appointments are scheduled. Evenings and weekends may be available.</p>
             <p>Please do not send passwords through this form.</p>
-            <p class="note">Replace the form action with your Formspree endpoint before launch.</p>
+            <p class="note">This form uses Cloudflare Turnstile to help reduce spam.</p>
           </div>
 
           <form class="help-form" action="https://formspree.io/f/mnpaznpz" method="POST">
             <input type="hidden" name="_subject" value="New Fiorillo Tech help request">
             <input type="hidden" name="_next" value="https://fiorillotech.com/thanks.html">
+            <label class="honeypot" aria-hidden="true">
+              <span>Leave this field empty</span>
+              <input name="_gotcha" tabindex="-1" autocomplete="off">
+            </label>
 
             <label>
               <span>Name</span>
@@ -100,6 +105,10 @@
               <input type="checkbox" name="consent" required>
               <span>I understand this request does not guarantee immediate service.</span>
             </label>
+
+            <div class="turnstile-wrap">
+              <div class="cf-turnstile" data-sitekey="0x4AAAAAAEPRLfRyW8MisTxZI6_SRABB9eM"></div>
+            </div>
 
             <button class="button primary" type="submit">Send Request</button>
           </form>

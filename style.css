@@ -422,6 +422,14 @@ textarea {
   width: 20px;
 }
 
+.honeypot {
+  display: none;
+}
+
+.turnstile-wrap {
+  min-height: 65px;
+}
+
 .contact-note {
   align-self: start;
   border-top: 2px solid var(--green);
