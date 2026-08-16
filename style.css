@@ -18,6 +18,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 html {
   background: var(--paper);
   color: var(--ink);
@@ -407,8 +411,12 @@ textarea {
 
 input[type="checkbox"] {
   accent-color: var(--green);
+  height: 16px;
   min-height: auto;
   padding: 0;
+  transform: scale(0.9);
+  transform-origin: top left;
+  vertical-align: top;
   width: auto;
 }
 
@@ -433,16 +441,16 @@ textarea {
   align-items: flex-start;
   border-bottom: 1px solid var(--line);
   display: flex;
-  gap: 0.55rem;
-  padding: 0.55rem 0;
+  gap: 0.45rem;
+  padding: 0.35rem 0;
 }
 
 .checkbox-option input {
   flex: 0 0 auto;
-  height: 17px;
+  height: 16px;
   margin-top: 0.25rem;
-  min-height: 17px;
-  width: 17px;
+  min-height: 16px;
+  width: 16px;
 }
 
 .checkbox {
