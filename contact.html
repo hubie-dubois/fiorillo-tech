@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Request Help | Fiorillo Tech</title>
+    <meta name="description" content="Request computer help, Wi-Fi help, printer help, TV mounting, or technology support from Fiorillo Tech in Champaign-Urbana.">
+    <link rel="canonical" href="https://fiorillotech.com/contact.html">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <div class="wrap header-wrap">
+        <a class="brand" href="index.html"><span class="brand-mark">FT</span><span><strong>Fiorillo Tech</strong><small>Local computer help</small></span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a aria-current="page" href="contact.html">Request Help</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-intro">
+        <div class="wrap">
+          <p class="eyebrow">Request help</p>
+          <h1>Tell us what is going on.</h1>
+          <p class="lead">Use normal words. You do not need to know what the problem is called.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap contact-layout">
+          <div class="contact-note">
+            <h2>Before you send</h2>
+            <p>Appointments are scheduled. Evenings and weekends may be available.</p>
+            <p>Please do not send passwords through this form.</p>
+            <p class="note">Replace the form action with your Formspree endpoint before launch.</p>
+          </div>
+
+          <form class="help-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="hidden" name="_subject" value="New Fiorillo Tech help request">
+            <input type="hidden" name="_next" value="https://fiorillotech.com/thanks.html">
+
+            <label>
+              <span>Name</span>
+              <input name="name" autocomplete="name" required>
+            </label>
+
+            <label>
+              <span>Phone</span>
+              <input name="phone" type="tel" autocomplete="tel" required>
+            </label>
+
+            <label>
+              <span>Email, if you prefer email</span>
+              <input name="email" type="email" autocomplete="email">
+            </label>
+
+            <label>
+              <span>What do you need help with?</span>
+              <select name="service" required>
+                <option value="">Choose one</option>
+                <option>Computer help</option>
+                <option>Wi-Fi or internet</option>
+                <option>Printer</option>
+                <option>Email, phone, tablet, or device setup</option>
+                <option>TV mounting or TV setup</option>
+                <option>Small-business technology</option>
+                <option>Website</option>
+                <option>Something else</option>
+              </select>
+            </label>
+
+            <label>
+              <span>What is happening?</span>
+              <textarea name="message" rows="7" required placeholder="Example: My printer stopped printing after I changed Wi-Fi."></textarea>
+            </label>
+
+            <label>
+              <span>City or ZIP code</span>
+              <input name="location" autocomplete="postal-code" required>
+            </label>
+
+            <label>
+              <span>Good times to reach you</span>
+              <input name="availability" placeholder="Example: weekday evenings or Saturday afternoon">
+            </label>
+
+            <fieldset>
+              <legend>If this is for TV mounting, share what you know.</legend>
+              <label><span>TV size</span><input name="tv_size" placeholder="Example: 65 inch"></label>
+              <label><span>Do you already have a mount?</span><input name="tv_mount" placeholder="Yes, no, or not sure"></label>
+              <label><span>Wall type, if known</span><input name="wall_type" placeholder="Drywall, brick, fireplace, not sure"></label>
+            </fieldset>
+
+            <label class="checkbox">
+              <input type="checkbox" name="consent" required>
+              <span>I understand this request does not guarantee immediate service.</span>
+            </label>
+
+            <button class="button primary" type="submit">Send Request</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-wrap">
+        <div><strong>Fiorillo Tech</strong><p>Friendly local computer help.</p></div>
+        <nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a></nav>
+      </div>
+    </footer>
+  </body>
+</html>
