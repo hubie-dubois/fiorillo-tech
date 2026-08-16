@@ -22,21 +22,37 @@ Then visit `http://localhost:8000`.
 
 ## Formspree Setup
 
-In `contact.html`, replace:
+The contact form posts to:
 
-```html
-https://formspree.io/f/YOUR_FORM_ID
+```text
+https://formspree.io/f/mnpaznpz
 ```
-
-with the real Formspree endpoint.
 
 The form redirects to:
 
-```html
+```text
 https://fiorillotech.com/thanks.html
 ```
 
 after a successful submission.
+
+## Turnstile Spam Protection
+
+The contact form uses Cloudflare Turnstile with the public site key embedded in
+`contact.html`.
+
+In Cloudflare Turnstile, allow these hostnames:
+
+```text
+fiorillotech.com
+www.fiorillotech.com
+localhost
+```
+
+In Formspree, enable CAPTCHA or spam protection for the form, choose Cloudflare
+Turnstile, and paste the matching Turnstile secret key there.
+
+Never place the Turnstile secret key in this repository or in public HTML.
 
 ## GitHub Pages
 
@@ -50,8 +66,6 @@ For GitHub Pages, publish from the repository root. Keep `.nojekyll`.
 
 ## Still Needed
 
-- Real Formspree endpoint
 - Real phone/email if you want them displayed on the site
 - Owner names and real photo
-- Final pricing language
-- GitHub Pages DNS setup
+- Test a live Formspree submission after Turnstile is enabled in Formspree
