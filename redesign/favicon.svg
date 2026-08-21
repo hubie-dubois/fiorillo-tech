@@ -1,0 +1,10 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Fiorillo Tech favicon</title>
+  <rect x="0" y="0" width="64" height="64" rx="14" fill="#171717"/>
+  <path d="M18 15V50" stroke="#F7F3EA" stroke-width="7.5" stroke-linecap="square"/>
+  <path d="M18 15H41" stroke="#F7F3EA" stroke-width="7.5" stroke-linecap="square"/>
+  <path d="M18 31H37" stroke="#F7F3EA" stroke-width="7.5" stroke-linecap="square"/>
+  <path d="M37 15H51" stroke="#C18B2F" stroke-width="7.5" stroke-linecap="square"/>
+  <path d="M44 15V46" stroke="#C18B2F" stroke-width="7.5" stroke-linecap="square"/>
+  <circle cx="44" cy="50" r="4.5" fill="#8A1F2D"/>
+</svg>
