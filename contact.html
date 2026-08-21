@@ -6,9 +6,9 @@
     <title>Request Help | Fiorillo Tech</title>
     <meta name="description" content="Request computer help, Wi-Fi help, printer help, TV mounting, or technology support from Fiorillo Tech in Champaign-Urbana.">
     <link rel="canonical" href="https://fiorillotech.com/contact.html">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <script src="contact.js?v=3" defer></script>
+    <script src="contact.js?v=4" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -35,7 +35,7 @@
             <p>If you have a screenshot, photo, or file that would help explain the problem, please email it to that address.</p>
           </div>
 
-          <form class="help-form" action="https://formspree.io/f/mnpaznpz" method="POST">
+          <form class="help-form" action="https://formspree.io/f/mnpaznpz" method="POST" data-success-url="thanks.html">
             <input type="hidden" name="_subject" value="New Fiorillo Tech help request">
             <input type="hidden" name="_next" value="https://fiorillotech.com/thanks.html">
             <label class="honeypot" aria-hidden="true">
@@ -104,6 +104,7 @@
               <div class="cf-turnstile" data-sitekey="0x4AAAAAAEPRLVmeQeEHyTSr"></div>
             </div>
 
+            <p class="form-submit-status" role="status" aria-live="polite" hidden></p>
             <button class="button primary" type="submit">Send Request</button>
           </form>
         </div>

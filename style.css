@@ -533,6 +533,26 @@ textarea {
   min-height: 65px;
 }
 
+.form-submit-status {
+  background: var(--green-soft);
+  border-left: 4px solid var(--green);
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0.85rem 1rem;
+}
+
+.form-submit-status.error {
+  background: #fff4ef;
+  border-color: var(--clay);
+}
+
+.button:disabled,
+.help-form.is-submitting .button.primary {
+  cursor: wait;
+}
+
 .contact-note {
   align-self: start;
   border-top: 2px solid var(--green);
