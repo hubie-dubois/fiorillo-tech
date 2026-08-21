@@ -8,7 +8,7 @@
     <link rel="canonical" href="https://fiorillotech.com/contact.html">
     <link rel="stylesheet" href="style.css?v=4">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <script src="contact.js?v=4" defer></script>
+    <script src="contact.js?v=5" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -50,12 +50,13 @@
 
             <label>
               <span>Phone (required)</span>
-              <input name="phone" type="tel" autocomplete="tel" required>
+              <input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(217) 555-0123" aria-describedby="phone-help" required>
+              <small id="phone-help" class="field-help">Enter a 10-digit phone number.</small>
             </label>
 
             <label>
               <span>Email (optional)</span>
-              <input name="email" type="email" autocomplete="email">
+              <input name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com">
             </label>
 
             <fieldset class="service-options" aria-describedby="service-help">

@@ -11,6 +11,8 @@
   var firstServiceOption = serviceOptions[0];
   var tvOption = form.querySelector("#service-tv");
   var tvDetails = form.querySelector("#tv-details");
+  var phoneInput = form.querySelector('input[name="phone"]');
+  var emailInput = form.querySelector('input[name="email"]');
   var submitButton = form.querySelector('button[type="submit"]');
   var submitStatus = form.querySelector(".form-submit-status");
   var defaultSubmitText = submitButton ? submitButton.textContent : "";
@@ -60,7 +62,65 @@
 
   function updateFormState() {
     updateServiceValidation();
+    updateContactValidation();
     updateTvDetails();
+  }
+
+  function getDigits(value) {
+    return value.replace(/\D/g, "");
+  }
+
+  function formatPhoneNumber(value) {
+    var digits = getDigits(value);
+    var formattedDigits = digits.slice(0, 10);
+    var extraDigits = digits.slice(10);
+    var formatted = formattedDigits;
+
+    if (formattedDigits.length > 6) {
+      formatted = "(" + formattedDigits.slice(0, 3) + ") " + formattedDigits.slice(3, 6) + "-" + formattedDigits.slice(6);
+    } else if (formattedDigits.length > 3) {
+      formatted = "(" + formattedDigits.slice(0, 3) + ") " + formattedDigits.slice(3);
+    }
+
+    return extraDigits ? formatted + " " + extraDigits : formatted;
+  }
+
+  function updatePhoneValidation() {
+    if (!phoneInput) {
+      return;
+    }
+
+    var digitCount = getDigits(phoneInput.value).length;
+
+    phoneInput.setCustomValidity(
+      digitCount === 0 || digitCount === 10 ? "" : "Please enter a 10-digit phone number."
+    );
+  }
+
+  function formatPhoneInput() {
+    if (!phoneInput) {
+      return;
+    }
+
+    phoneInput.value = formatPhoneNumber(phoneInput.value);
+    updatePhoneValidation();
+  }
+
+  function updateEmailValidation() {
+    if (!emailInput) {
+      return;
+    }
+
+    emailInput.setCustomValidity("");
+
+    if (emailInput.value.trim() && !emailInput.validity.valid) {
+      emailInput.setCustomValidity("Please enter a valid email address.");
+    }
+  }
+
+  function updateContactValidation() {
+    updatePhoneValidation();
+    updateEmailValidation();
   }
 
   function setSubmitStatus(message, type) {
@@ -121,8 +181,14 @@
 
   function handleSubmit(event) {
     updateServiceValidation();
+    formatPhoneInput();
+    updateContactValidation();
 
     if (!form.checkValidity()) {
+      event.preventDefault();
+      if (typeof form.reportValidity === "function") {
+        form.reportValidity();
+      }
       return;
     }
 
@@ -169,6 +235,16 @@
   serviceOptions.forEach(function (option) {
     option.addEventListener("change", updateFormState);
   });
+
+  if (phoneInput) {
+    phoneInput.addEventListener("input", formatPhoneInput);
+    phoneInput.addEventListener("blur", formatPhoneInput);
+  }
+
+  if (emailInput) {
+    emailInput.addEventListener("input", updateEmailValidation);
+    emailInput.addEventListener("blur", updateEmailValidation);
+  }
 
   form.addEventListener("submit", handleSubmit);
   updateFormState();
