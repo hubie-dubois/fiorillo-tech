@@ -66,6 +66,57 @@
     updateTvDetails();
   }
 
+  function normalizeServiceToken(value) {
+    return String(value || "")
+      .toLowerCase()
+      .replace(/&/g, " and ")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  }
+
+  function applyServicePreset() {
+    var serviceMap = {
+      computer: ["Computer help"],
+      devices: ["Email, phone, tablet, or device setup"],
+      printer: ["Printer"],
+      remote: ["Computer help"],
+      tv: ["TV mounting or TV setup"],
+      wifi: ["Wi-Fi or internet"],
+      business: ["Small-business technology"],
+      "small-business": ["Small-business technology"],
+      website: ["Website"],
+      websites: ["Website"],
+      other: ["Something else"],
+      "something-else": ["Something else"]
+    };
+    var requestedServices = [];
+
+    if (!window.URLSearchParams) {
+      return;
+    }
+
+    new URLSearchParams(window.location.search).getAll("service").forEach(function (value) {
+      value.split(",").forEach(function (service) {
+        requestedServices.push(service);
+      });
+    });
+
+    requestedServices.forEach(function (requestedService) {
+      var requestedToken = normalizeServiceToken(requestedService);
+      var serviceValues = serviceMap[requestedToken] || [requestedService];
+
+      serviceValues.forEach(function (serviceValue) {
+        var serviceToken = normalizeServiceToken(serviceValue);
+
+        serviceOptions.forEach(function (option) {
+          if (option.value === serviceValue || normalizeServiceToken(option.value) === serviceToken) {
+            option.checked = true;
+          }
+        });
+      });
+    });
+  }
+
   function getDigits(value) {
     return value.replace(/\D/g, "");
   }
@@ -247,5 +298,6 @@
   }
 
   form.addEventListener("submit", handleSubmit);
+  applyServicePreset();
   updateFormState();
 })();

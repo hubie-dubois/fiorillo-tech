@@ -28,7 +28,6 @@
         </a>
         <nav class="site-nav" aria-label="Primary navigation">
           <a aria-current="page" href="services.html">Services</a>
-          <a href="pricing.html">Pricing</a>
           <a href="about.html">About</a>
           <a href="contact.html">Request Help</a>
         </nav>
@@ -37,57 +36,49 @@
 
     <main id="main">
       <section class="section">
-        <div class="wrap service-detail-list">
-          <article class="pricing-summary">
-            <h2>Simple starting prices</h2>
-            <p>These are starting points for common jobs. We will confirm expected pricing before work begins, and we will tell you if a job is likely to cost more before moving forward.</p>
-            <dl class="quick-prices">
-              <div><dt>Remote help</dt><dd>Starts at $65</dd></div>
-              <div><dt>Home visit</dt><dd>$95/hour</dd></div>
-              <div><dt>Small-business help</dt><dd>$115/hour</dd></div>
-              <div><dt>TV mounting</dt><dd>Starts at $149</dd></div>
-              <div><dt>Simple websites</dt><dd>Starts at $750</dd></div>
-            </dl>
-            <p class="note">Prices may vary based on the issue, number of devices, travel, parts or equipment, TV size and weight, wall type, mount type, mounting location, and any additional setup requested. Hardware, mounts, cables, subscriptions, software, and replacement parts are not included unless specifically quoted.</p>
-          </article>
-
-          <article id="computer">
+        <div class="wrap">
+          <div class="section-heading service-page-heading">
+            <p class="eyebrow">Services</p>
+          </div>
+        </div>
+        <div class="wrap service-detail-list service-catalog">
+          <article id="computer" data-contact-service="computer">
             <h2>Computer Help</h2>
             <p>Slow computer, new computer setup, Windows troubleshooting, basic Mac help, software installation, file transfer guidance, email setup, backups, cleanup, and general questions.</p>
             <p class="service-price">Remote help starts at $65. In-home computer help is $95/hour with a one-hour minimum.</p>
           </article>
-          <article id="wifi">
+          <article id="wifi" data-contact-service="wifi">
             <h2>Wi-Fi and Home Networking</h2>
             <p>Help with slow Wi-Fi, router setup, weak signal, mesh Wi-Fi, devices that drop offline, and basic home network settings. Fiorillo Tech is not an internet service provider.</p>
             <p class="service-price">Wi-Fi and home network visits are $95/hour. Most simple router or device-connection appointments are one to two hours.</p>
           </article>
-          <article id="printer">
+          <article id="printer" data-contact-service="printer">
             <h2>Printer Help</h2>
             <p>Wireless printer setup, printing problems, scanning, drivers, new printer setup, and printer issues that appear after a computer or router change.</p>
             <p class="service-price">Printer help starts at $65 remotely when practical, or $95/hour for an in-home visit.</p>
           </article>
-          <article id="devices">
+          <article id="devices" data-contact-service="devices">
             <h2>Phones, Tablets, Email, and Devices</h2>
             <p>Setup help for email, phones, tablets, streaming devices, smart-home devices, and home-office technology.</p>
             <p class="service-price">Device, email, and home-technology help starts at $65 remotely, or $95/hour on site.</p>
           </article>
-          <article id="tv">
+          <article id="tv" data-contact-service="tv">
             <h2>TV Mounting and Home Entertainment</h2>
             <p>TV wall mounting, smart TV setup, streaming devices, soundbars, input setup, basic picture/audio settings, and practical cable organization.</p>
             <p class="service-price">Standard TV mounting starts at $149 for smaller TVs on standard drywall with a compatible customer-provided mount. Larger TVs and add-ons are priced before scheduling.</p>
             <p class="note">TV mounting depends on TV size and weight, wall type, mount compatibility, stud placement, manufacturer requirements, and safe installation conditions. Licensed electrical work and new in-wall electrical wiring are not included.</p>
           </article>
-          <article id="business">
-            <h2>Very Small Business IT</h2>
+          <article id="business" data-contact-service="business">
+            <h2>Small Business IT</h2>
             <p>Computer setup, printer help, Wi-Fi troubleshooting, email guidance, Microsoft 365 questions, backup guidance, vendor coordination, and practical technology advice for small organizations without internal IT staff.</p>
             <p class="service-price">Small-business support is $115/hour with a one-hour minimum. Project pricing is available for larger setup work.</p>
           </article>
-          <article id="websites">
+          <article id="websites" data-contact-service="website">
             <h2>Simple Websites</h2>
             <p>Clean websites for local businesses, side businesses, clubs, nonprofits, and individuals. This includes small sites, landing pages, domain guidance, hosting guidance, and updates.</p>
             <p class="service-price">One-page starter websites begin at $750. Small 3-5 page business websites begin at $1,500. Larger sites are quoted by scope.</p>
           </article>
-          <article id="remote">
+          <article id="remote" data-contact-service="remote">
             <h2>Remote Support</h2>
             <p>Some software, email, settings, and troubleshooting issues can be handled remotely. Remote access only happens with your permission.</p>
             <p class="service-price">Remote support starts at $65. If the issue needs an in-person visit, we will explain that before continuing.</p>
@@ -113,13 +104,14 @@
           <p>Friendly local computer help for homes and small businesses.</p>
         </div>
         <nav aria-label="Footer navigation">
-          <a href="services.html">Services</a>
-          <a href="pricing.html">Pricing</a>
+          <a aria-current="page" href="services.html">Services</a>
+          <a href="about.html">About</a>
           <a href="contact.html">Request Help</a>
           <a href="privacy.html">Privacy</a>
           <a href="terms.html">Terms</a>
         </nav>
       </div>
     </footer>
-  </body>
+    <script src="experience.js" defer></script>
+</body>
 </html>
