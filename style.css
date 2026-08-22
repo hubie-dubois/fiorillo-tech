@@ -961,7 +961,7 @@ textarea {
 
 .checkbox-option,
 .checkbox {
-  align-items: start;
+  align-items: center;
   background: rgba(247, 243, 234, 0.04);
   border: 1px solid rgba(217, 222, 226, 0.12);
   border-radius: var(--radius);
@@ -978,8 +978,9 @@ textarea {
 
 input[type="checkbox"] {
   accent-color: var(--brass);
+  align-self: center;
   height: 18px;
-  margin-top: 0.2rem;
+  margin: 0;
   width: 18px;
 }
 
