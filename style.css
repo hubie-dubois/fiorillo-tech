@@ -1146,7 +1146,35 @@ input[type="checkbox"] {
   }
 
   .process-section .two-column {
-    gap: 1.25rem;
+    align-items: start;
+    gap: 0.95rem;
+    grid-template-columns: 1fr;
+  }
+
+  .process-section h2 {
+    font-size: clamp(1.85rem, 6vw, 3rem);
+    line-height: 1;
+    max-width: none;
+  }
+
+  .steps {
+    gap: 0.65rem;
+    grid-template-columns: 1fr;
+  }
+
+  .steps li {
+    line-height: 1.42;
+    padding: 0.78rem 0.9rem;
+  }
+
+  .steps li::marker {
+    font-size: 1.25rem;
+  }
+
+  .steps strong {
+    display: inline;
+    margin-bottom: 0;
+    margin-right: 0.25rem;
   }
 
   .service-list,
