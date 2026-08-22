@@ -471,12 +471,12 @@ p {
 }
 
 .service-page-heading h1 {
-  font-size: clamp(2.2rem, 5.4vw, 5.4rem);
+  font-size: clamp(1.9rem, 4.2vw, 4.25rem);
   max-width: 13ch;
 }
 
 .contact-page-heading h1 {
-  font-size: clamp(2.2rem, 5.4vw, 5.4rem);
+  font-size: clamp(1.9rem, 4.2vw, 4.25rem);
   max-width: 14ch;
 }
 
@@ -838,7 +838,7 @@ p {
 }
 
 .about-copy h1 {
-  font-size: clamp(2.2rem, 5vw, 4.8rem);
+  font-size: clamp(1.9rem, 3.2vw, 3.25rem);
   line-height: 1;
   margin-bottom: 0.75rem;
 }
@@ -1021,7 +1021,7 @@ input[type="checkbox"] {
 }
 
 .policy h1 {
-  font-size: clamp(2.4rem, 7vw, 6.4rem);
+  font-size: clamp(1.9rem, 4.2vw, 4.25rem);
 }
 
 .thanks {
