@@ -125,8 +125,12 @@ textarea {
   z-index: 100;
 }
 
-.skip-link:focus {
+.skip-link:focus-visible {
   transform: translateY(0);
+}
+
+.skip-link:focus:not(:focus-visible) {
+  transform: translateY(-150%);
 }
 
 .scroll-progress {
