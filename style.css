@@ -784,14 +784,21 @@ p {
   grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.1fr);
 }
 
-.about-photo-card {
-  background: var(--graphite);
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius);
-  box-shadow: 0 34px 92px rgba(0, 0, 0, 0.5);
+.about-logo-card {
   align-self: start;
-  margin: 0;
-  overflow: hidden;
+  background:
+    linear-gradient(120deg, rgba(193, 139, 47, 0.12), transparent 42%),
+    linear-gradient(180deg, rgba(247, 243, 234, 0.035), transparent 68%);
+  border: 0;
+  border-radius: var(--radius);
+  box-shadow: none;
+  display: grid;
+  height: fit-content;
+  isolation: isolate;
+  min-height: clamp(260px, 34vw, 460px);
+  overflow: visible;
+  padding: clamp(1.25rem, 4vw, 2.6rem);
+  place-items: center;
   position: sticky;
   top: 6.5rem;
   transform:
@@ -803,35 +810,28 @@ p {
     transform 180ms ease;
 }
 
-.about-photo-card:hover {
-  box-shadow: 0 42px 104px rgba(0, 0, 0, 0.62);
-}
-
-.about-photo-card img {
-  aspect-ratio: 4 / 5;
-  filter: saturate(0.88) contrast(1.08);
-  height: auto;
-  object-fit: cover;
-  width: 100%;
-}
-
-.about-photo-card figcaption {
+.about-logo-card::before {
   background:
-    linear-gradient(90deg, rgba(193, 139, 47, 0.16), transparent),
-    var(--black);
-  border-top: 1px solid var(--line-strong);
-  display: grid;
-  gap: 0.25rem;
-  padding: 1rem 1.15rem;
+    linear-gradient(90deg, transparent, rgba(193, 139, 47, 0.16), transparent),
+    linear-gradient(180deg, rgba(138, 31, 45, 0.14), transparent 48%);
+  content: "";
+  inset: 12% -6%;
+  opacity: 0.58;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
 }
 
-.about-photo-card figcaption strong {
-  color: var(--paper);
+.about-logo-card:hover {
+  box-shadow: none;
 }
 
-.about-photo-card figcaption span {
-  color: var(--steel-bright);
-  font-size: 0.95rem;
+.about-logo-card img {
+  filter: drop-shadow(0 28px 70px rgba(0, 0, 0, 0.46));
+  height: auto;
+  opacity: 0.22;
+  position: relative;
+  width: min(82%, 420px);
 }
 
 .about-copy {
@@ -1194,7 +1194,7 @@ input[type="checkbox"] {
     grid-column: 1;
   }
 
-  .about-photo-card,
+  .about-logo-card,
   .contact-note {
     position: static;
   }

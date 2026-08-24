@@ -28,7 +28,7 @@
     var tiltTargets = Array.prototype.slice.call(document.querySelectorAll([
       ".service-list a",
       ".service-detail-list article",
-      ".about-photo-card"
+      ".about-logo-card"
     ].join(",")));
 
     tiltTargets.forEach(function (target) {
