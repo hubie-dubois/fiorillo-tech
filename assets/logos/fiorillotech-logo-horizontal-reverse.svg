@@ -1,0 +1,18 @@
+<svg width="960" height="220" viewBox="0 0 960 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Fiorillo Tech logo</title>
+  <desc id="desc">Round FT signal mark beside the Fiorillo Tech wordmark.</desc>
+  <g transform="translate(44 41)">
+  <rect width="138" height="138" rx="69" fill="#F8F3EA"/>
+
+  <g transform="translate(0 0) scale(2.15625)">
+    <path d="M17 14H42V20H23V28H38V34H23V50H17Z" fill="#151515"/>
+    <path d="M36 20H53V26H47.5V45H41.5V26H36Z" fill="#2F6FAD"/>
+    <circle cx="44.5" cy="50" r="4.5" fill="#2F6FAD"/>
+  </g>
+  </g>
+  <g transform="translate(226 60)">
+    <text x="0" y="58" style="font:720 72px Inter, Arial, Helvetica, sans-serif" fill="#F8F3EA">fiorillo</text>
+    <text x="250" y="58" style="font:720 72px Inter, Arial, Helvetica, sans-serif" fill="#78B9F2">tech</text>
+    <text x="6" y="99" style="font:660 21px SFMono-Regular, Menlo, Consolas, monospace" fill="#D8D0C4">home + small business support</text>
+  </g>
+</svg>
